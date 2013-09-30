@@ -11,4 +11,23 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
+    #import <CoreData/CoreData.h>
+#import "GlobalDef.h"
+#import "WPAppDelegate.h"
+#import "WPViewTool.h"
+#import "WPBeta.h"
+
+#define SharedAppDelegate ((WPAppDelegate*)[[UIApplication sharedApplication] delegate])
+
+#define KEY_WINDOW  [[UIApplication sharedApplication] keyWindow]
+
+// Debug Logging
+#if 1 // Set to 1 to enable debug logging
+#define WPLog(x, ...) NSLog(x, ## __VA_ARGS__);
+#else
+#define WPLog(x, ...)
+#endif
+
+
+
 #endif
